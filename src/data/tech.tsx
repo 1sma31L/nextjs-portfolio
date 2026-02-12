@@ -1,4 +1,4 @@
-import { FaC, FaReact } from 'react-icons/fa6';
+import { FaReact } from 'react-icons/fa6';
 import { FaCss3, FaGithub, FaHtml5, FaLinux, FaNode } from 'react-icons/fa';
 import { RiNextjsFill, RiTailwindCssFill } from 'react-icons/ri';
 import {
@@ -7,10 +7,15 @@ import {
   SiGit,
   SiGnubash,
   SiJavascript,
-  SiLatex,
   SiMongodb,
-  SiRedux,
   SiTypescript,
+  SiGo,
+  SiNestjs,
+  SiTrpc,
+  SiPostgresql,
+  SiSupabase,
+  SiDocker,
+  SiNeovim,
 } from 'react-icons/si';
 
 import { IoLogoFirebase } from 'react-icons/io5';
@@ -39,6 +44,11 @@ const stack: TItem[] = [
     color: 'Blue',
   },
   {
+    name: 'Go',
+    icon: <SiGo />,
+    color: 'Blue',
+  },
+  {
     name: 'Tailwind CSS',
     icon: <RiTailwindCssFill />,
     color: 'Cyan',
@@ -47,11 +57,6 @@ const stack: TItem[] = [
     name: 'React',
     icon: <FaReact />,
     color: 'Blue',
-  },
-  {
-    name: 'Redux',
-    icon: <SiRedux />,
-    color: 'Purple',
   },
   {
     name: 'Next.js',
@@ -69,9 +74,24 @@ const stack: TItem[] = [
     color: 'Zinc',
   },
   {
+    name: 'Nest.js',
+    icon: <SiNestjs />,
+    color: 'Red',
+  },
+  {
+    name: 'tRPC',
+    icon: <SiTrpc />,
+    color: 'Blue',
+  },
+  {
     name: 'MongoDB',
     icon: <SiMongodb />,
     color: 'Green',
+  },
+  {
+    name: 'PostgreSql',
+    icon: <SiPostgresql />,
+    color: 'Blue',
   },
   {
     name: 'Firebase',
@@ -79,9 +99,9 @@ const stack: TItem[] = [
     color: 'Yellow',
   },
   {
-    name: 'VS Code',
-    icon: <VscVscode />,
-    color: 'Blue',
+    name: 'Supabase',
+    icon: <SiSupabase />,
+    color: 'Green',
   },
   {
     name: 'Git',
@@ -93,7 +113,11 @@ const stack: TItem[] = [
     icon: <FaGithub />,
     color: 'Zinc',
   },
-
+  {
+    name: 'Docker',
+    icon: <SiDocker />,
+    color: 'Blue',
+  },
   {
     name: 'Bash',
     icon: <SiGnubash />,
@@ -110,14 +134,9 @@ const stack: TItem[] = [
     color: 'Blue',
   },
   {
-    name: 'C Language',
-    icon: <FaC />,
-    color: 'Blue',
-  },
-  {
-    name: 'LaTeX',
-    icon: <SiLatex />,
-    color: 'Gray',
+    name: 'Nvim',
+    icon: <SiNeovim />,
+    color: 'Green',
   },
 ];
 

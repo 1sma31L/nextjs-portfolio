@@ -13,35 +13,39 @@ function InfiniteScroll({ icons }: { icons: TItem[] }) {
     Orange: 'hover:text-orange-500 ',
     Cyan: 'hover:text-cyan-600 ',
   };
-  return (
-    <div
-      className="flex w-full overflow-hidden whitespace-nowrap
-      relative  
-  before:absolute before:left-0 before:top-0 before:z-[2] before:h-full md:before:w-[80px] before:w-[30px] 
-  before:bg-[linear-gradient(to_right,theme(colors.background)_0%,rgba(255,255,255,0)_100%)] 
-  dark:before:bg-[linear-gradient(to_right,theme(colors.background)_0%,rgba(0,0,0,0)_100%)] 
-  before:content-[''] 
-  after:absolute after:right-0 after:top-0 after:z-[2] after:h-full 
-  md:after:w-[80px] after:w-[30px] 
-  after:scale-x-[-1] 
-  after:bg-[linear-gradient(to_right,theme(colors.background)_0%,rgba(255,255,255,0)_100%)] 
-  dark:after:bg-[linear-gradient(to_right,theme(colors.background)_0%,rgba(0,0,0,0)_100%)] 
-  after:content-['']
-    group    pt-1">
-      {['', ''].map((_, i) => (
-        <div className="animate-scroll group-hover:pause inline-block" key={i}>
-          {icons.map((icon, index) => (
-            <div
-              className={`text-4xl md:text-5xl mx-5 md:mx-7 inline-block 
-                ${colorVariants[icon.color]}
-                transition-all duration-75
-                `}
-              key={index}>
-              {icon.icon}
-            </div>
-          ))}
+  const containerClass = [
+    'flex w-full overflow-hidden whitespace-nowrap relative group pt-1',
+
+    'before:absolute before:left-0 before:top-0 before:z-[2] before:h-full',
+    'before:w-[30px] md:before:w-[80px]',
+    'before:bg-gradient-to-r before:from-background before:to-transparent',
+    'before:content-[""] before:pointer-events-none',
+
+    'after:absolute after:right-0 after:top-0 after:z-[2] after:h-full',
+    'after:w-[30px] md:after:w-[80px]',
+    'after:bg-gradient-to-r after:from-transparent after:to-background',
+    'after:content-[""] after:pointer-events-none',
+  ].join(' ');
+  const IconList = () => (
+    <div className="flex shrink-0">
+      {icons.map((icon, index) => (
+        <div
+          className={`text-4xl md:text-5xl mx-5 md:mx-7 
+            ${colorVariants[icon.color]} 
+            transition-all duration-75`}
+          key={index}>
+          {icon.icon}
         </div>
       ))}
+    </div>
+  );
+
+  return (
+    <div className={containerClass}>
+      <div className="flex animate-scroll group-hover:[animation-play-state:paused]">
+        <IconList />
+        <IconList />
+      </div>
     </div>
   );
 }

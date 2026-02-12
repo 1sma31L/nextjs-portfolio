@@ -1,4 +1,3 @@
-import Age from '@/lib/calc-age';
 import AnimatedDiv from '@/components/AnimatedDiv';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import InfiniteScroll from '@/components/InfiniteScroll';
@@ -11,12 +10,12 @@ function Home() {
   return (
     <AnimatedDiv id={0}>
       <main className="container px-4 md:px-0 flex flex-col justify-center items-center gap-28 py-6 md:py-0">
-        <section className="flex flex-col gap-5 min-h-[72vh] md:min-h-[85vh] justify-center items-center w-full">
+        <section className="flex flex-col gap-12 min-h-[72vh] md:min-h-[85vh] justify-center items-center w-full">
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold inline-block text-foreground text-left w-full bg-clip-text leading-none bg-gradient-to-r from-primary to-secondary">
             <span>Ismail Mohamed</span>{' '}
             <span className="text-accent uppercase">Boussekine</span>
           </h1>
-          <div className="text-sm sm:text-base flex flex-col gap-5 text-foreground/90">
+          <div className="text-sm sm:text-base flex flex-col gap-8 text-foreground/90">
             <div className="flex flex-row gap-1 flex-wrap justify-start items-center">
               {SocialMedia.map((item, index) => (
                 <Link
@@ -45,16 +44,16 @@ function Home() {
               </footer>
             </blockquote>
             <p className="indent-5 text-foreground/80 text-sm sm:text-md md:text-xl">
-              {/* Remove dynamic age calcuation fro SEO purposes */}
-              I&apos;m a 20 years old computer science undergrad student at
-              ENSTA and a junior{' '}
+              {/* Remove dynamic age calcuation for SEO purposes */}
+              I&apos;m a 21 years old cybersecurity undergrad student at ENSTA
+              and a junior{' '}
               <span className="text-foreground font-medium">
                 web developer.
               </span>
-              I love building things and solving problems. I enjoy system
-              design, Theoretical computer science and I live on the editor. If
-              I&apos;m not coding, i&apos;m probably watching movies, TV Shows
-              or obsessing over{' '}
+              I love building things and solving problems. I enjoy system design
+              and architecture, Theoretical computer science and I live on the
+              editor. If I&apos;m not coding, i&apos;m probably watching movies,
+              TV Shows or obsessing over{' '}
               <span className="text-foreground font-medium">
                 mechanical keyboards.
               </span>
@@ -117,7 +116,7 @@ function Home() {
                   className="font-bold text-primary hover:underline transition-colors">
                   music
                 </Link>
-                , And last but not least, Dark rainy weather is the best.
+                , And last but not least, Dark rainy saturdays are the best.
               </p>
             </div>
           </div>
